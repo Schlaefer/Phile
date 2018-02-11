@@ -85,7 +85,7 @@ class AbstractPluginTest extends TestCase
     public function testInitializePluginEventsNotCallable()
     {
         $this->mockPlugin();
-        $this->setExpectedException('\RuntimeException', null, 1428564865);
+        $this->expectException('\RuntimeException', null, 1428564865);
         $plugin = $this->mockPlugin();
         $this->expectException('\RuntimeException', null, 1428564865);
         Event::triggerEvent('phile\testPlugin.testEvent-missingMethod');
